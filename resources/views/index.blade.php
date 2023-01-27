@@ -42,6 +42,13 @@
         .w-15 {
             width: 15%;
         }
+        .newpaper{
+            border: 1px solid rgb(35, 231, 61, 0.3);
+            overflow: hidden;
+        }
+        .newpaper-content{
+            flex-wrap: nowrap;
+        }
     </style>
     <div class="container p-0">
         <div class=" ps-0 pe-0  mb-3 row w-100" style="justify-content:space-between">
@@ -79,7 +86,9 @@
 
             </div>
 
-            <div class="col-md-4 ps-1 row p-0">
+            <div class="col-md-4 ps-1 row p-0" style="display: flex;
+            flex-direction: column;
+            justify-content: space-between;">
                 <div class="col-md-12 ">
                     <img class="boder-green w-100 p-0 pb-2" src="/images/carosel/biabe1.png" alt="">
                 </div>
@@ -87,40 +96,61 @@
                 <div class="col-md-12">
                     <img class="col-md-12 boder-green w-100 p-0 pt-2" src="/images/carosel/biabe1.png" alt="">
                 </div>
-
-
             </div>
         </div>
     </div>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light container"
-        style=" display:flex;border: 1px solid green;flex-direction: column;">
-        <div class="container-fluid">
-            <a class="navbar-brand d-md-none d-md-flex" href="#">Danh mục</a>
-            <a href="/danhmuc/all">Tât cả sản phẩm</a>
+    <div class="container">
+        <div class="row"> 
+        <div class="col-md-6 ps-0">
+            <img class="col-md-12 boder-green w-100 p-0 pt-2" src="/images/carosel/biangang2.png" alt="">
         </div>
-        <div class="container-fluid">
-            <div>
-                <ul class="navbar-nav d-flex flex-row">
-                    @foreach ($categories as $category)
-                        <li class="nav-item w-15 item-dm">
-                            <a class="nav-link d-flex flex-column align-items-center active" aria-current="page"
-                                href="/danhmuc/{{ $category->link }}">
-                                <img style="height:100px" src="{{ $category->url_img }}" alt="">
-                                <p style="margin: 0;text-align: center;">{{ $category->title }}</p>
-                            </a>
-                        </li>
-                    @endforeach
+        <div class="col-md-6 pe-0">
+            <img class="col-md-12 boder-green w-100 p-0 pt-2" src="/images/carosel/biangang1.jpg" alt="">
+        </div>
+    </div>
+    </div>
 
-
-                </ul>
-
+    <div class="newpaper container mt-4 pt-1" style="border: 1px solid rgb(35, 231, 61, 0.3)">
+        <div class="newpaper-content row">
+            <div class="col-md-2">
+                <img  class="w-100" src="\images\newspaper\baibao1.jpg" alt="">
+                <p style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">Công chúa kế vị Thụy Điển thích thú khi thăm làng nghề mây tre đan Phú Vinh</p>
+            </div>
+            <div class="col-md-2">
+                <img class="w-100" src="\images\newspaper\baibao1.jpg" alt="">
+                <p style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">Công chúa kế vị Thụy Điển thích thú khi thăm làng nghề mây tre đan Phú Vinh</p>
+            </div>
+            <div class="col-md-2">
+                <img class="w-100" src="\images\newspaper\baibao1.jpg" alt="">
+                <p style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">Công chúa kế vị Thụy Điển thích thú khi thăm làng nghề mây tre đan Phú Vinh</p>
+            </div>
+            <div class="col-md-2">
+                <img class="w-100" src="\images\newspaper\baibao1.jpg" alt="">
+                <p style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">Công chúa kế vị Thụy Điển thích thú khi thăm làng nghề mây tre đan Phú Vinh</p>
+            </div>
+            <div class="col-md-2">
+                <img class="w-100" src="\images\newspaper\baibao1.jpg" alt="">
+                <p style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">Công chúa kế vị Thụy Điển thích thú khi thăm làng nghề mây tre đan Phú Vinh</p>
+            </div>
+            <div class="col-md-2">
+                <img class="w-100" src="\images\newspaper\baibao1.jpg" alt="">
+                <p style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">Công chúa kế vị Thụy Điển thích thú khi thăm làng nghề mây tre đan Phú Vinh</p>
             </div>
 
-        </div>
-    </nav>
+            <div class="col-md-2">
+                <img class="w-100" src="\images\newspaper\baibao1.jpg" alt="">
+                <p style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">Công chúa kế vị Thụy Điển thích thú khi thăm làng nghề mây tre đan Phú Vinh</p>
+            </div>
 
+            <div class="col-md-2">
+                <img class="w-100" src="\images\newspaper\baibao1.jpg" alt="">
+                <p style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;">Công chúa kế vị Thụy Điển thích thú khi thăm làng nghề mây tre đan Phú Vinh</p>
+            </div>
+        </div>
+
+    </div>
 
 
 

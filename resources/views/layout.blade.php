@@ -172,6 +172,13 @@
     .category-text{
         color:{{$interfaceColor->bd_cl_text_category}};
     }
+    .btn-search-product{
+      height: 100%;
+      background-color: #888;
+    }
+    .btn-search-product:hover{
+      cursor: pointer;
+    }
     @media (min-width: 768px) {
       .col-sm-2-10 {
         width: 50%;
@@ -232,10 +239,15 @@
 
   <header class="section-header pb-3" style="position:fixed; z-index: 1000;width: 100%;">
 
-
     <!-- style="position:fixed; z-index: 1000;width: 100%;" -->
     <section class="header-main pb-3" style="background-color: {{$interfaceColor->hd_cl_background}}">
         <div class="container">
+          <div class="language">
+            <select name="" id="">
+              <option value="">Tiếng Việt</option>
+              <option value="">English</option>
+            </select>
+          </div>
             <div class="container-fluid">
                 <a href="/" id="logo-doc" style="display: flex;justify-content: center;align-items: center;">
                     <img width="400" src="/images/logo/logonn.png" alt="">
@@ -252,7 +264,9 @@
                             <div class="d-flex form-inputs">
                                 <input class="form-control" type="text" style="height: 40px;"
                                     placeholder="Search any product...">
-                                <i class="bx bx-search"></i>
+                                <div class="btn-search-product">
+                                  <i class="bx bx-search"></i>
+                                </div>
                             </div>
                         </div>
 
@@ -313,11 +327,11 @@
     <div class="container row pt-4" style="margin-left:auto;margin-right: auto; color:black">
       <div class="col-md-4">
           <ul style="list-style-type:none;padding: 0;">
-            <li style="margin-bottom: 15px;"><a href="/trogiup/abc"> Giới thiệu công ty </a></li>
-            <li style="margin-bottom: 15px;"><a href="/trogiup/abc"> Chính sách thanh toán</a></li>
-            <li style="margin-bottom: 15px;"><a href="/trogiup/abc"> Chinh sách vận chuyển</a></li>
-            <li style="margin-bottom: 15px;"><a href="/trogiup/abc"> Chính sách đổi trả và hoàn tiền</a></li>
-            <li style="margin-bottom: 15px;"><a href="/trogiup/abc"> Hướng dẫn bảo quản</a></li>
+            <li style="margin-bottom: 15px;"><a href="/gioi-thieu-va-chinh-sach"> Giới thiệu công ty </a></li>
+            <li style="margin-bottom: 15px;"><a href="/gioi-thieu-va-chinh-sach"> Chính sách thanh toán</a></li>
+            <li style="margin-bottom: 15px;"><a href="/gioi-thieu-va-chinh-sach"> Chinh sách vận chuyển</a></li>
+            <li style="margin-bottom: 15px;"><a href="/gioi-thieu-va-chinh-sach"> Chính sách đổi trả và hoàn tiền</a></li>
+            <li style="margin-bottom: 15px;"><a href="/gioi-thieu-va-chinh-sach"> Hướng dẫn bảo quản</a></li>
           </ul>
       </div>
 
