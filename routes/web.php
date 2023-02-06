@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\CategoryAdminCtrl;
 use App\Http\Controllers\Admin\ProductAdminCtrl;
 use App\Http\Controllers\Admin\CatalogueAdminController;
 use  App\Http\Controllers\Catalogue;
+use  App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ Route::get("sanpham/{sp}",[ProductCtrl::class,"show"]);
 Route::get("trogiup/{tg}",[PolicyCtrl::class,"index"]);
 Route::get("/catalogue",[Catalogue::class,'index']);
 Route::get("/catalogue/{link}",[Catalogue::class,'viewProductCatalogue']);
+Route::get("/home",[HomeController::class,'index']);
 
 //
 Route::get("/delete-types",[ProductCtrl::class,'deleteType']);
