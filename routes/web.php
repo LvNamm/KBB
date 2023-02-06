@@ -27,13 +27,13 @@ use  App\Http\Controllers\HomeController;
 //     return view('welcome');
 // });
 
-Route::get("/",[CategoryCtrl::class,'index']);
+// Route::get("/",[CategoryCtrl::class,'index']);
 Route::get("/danhmuc/{danhmuc}",[CategoryCtrl::class,'showProductByCategory']);
 Route::get("sanpham/{sp}",[ProductCtrl::class,"show"]);
 Route::get("trogiup/{tg}",[PolicyCtrl::class,"index"]);
 Route::get("/catalogue",[Catalogue::class,'index']);
 Route::get("/catalogue/{link}",[Catalogue::class,'viewProductCatalogue']);
-Route::get("/home",[HomeController::class,'index']);
+Route::get("/",[HomeController::class,'index']);
 
 //
 Route::get("/delete-types",[ProductCtrl::class,'deleteType']);

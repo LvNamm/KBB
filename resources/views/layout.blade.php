@@ -295,7 +295,7 @@
 
             <div class="mt-2">
                 <div style="display:flex;justify-content: space-evenly">
-                  <a class="link-dm" href="/home">Trang chủ</a>
+                  <a class="link-dm" href="/">Trang chủ</a>
                 <a class="link-dm" href="/danhmuc/all">Tất cả sản phẩm</a>
                 @foreach($categories as $category)
                 <a class="link-dm" href="/danhmuc/{{$category->link}}">{{$category->title}}</a>
