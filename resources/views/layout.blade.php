@@ -179,6 +179,11 @@
     .btn-search-product:hover{
       cursor: pointer;
     }
+    .language{
+      float: right;
+      margin-top: 1rem;
+      font-size: 0.7rem;
+    }
     @media (min-width: 768px) {
       .col-sm-2-10 {
         width: 50%;
@@ -290,6 +295,7 @@
 
             <div class="mt-2">
                 <div style="display:flex;justify-content: space-evenly">
+                  <a class="link-dm" href="/home">Trang chủ</a>
                 <a class="link-dm" href="/danhmuc/all">Tất cả sản phẩm</a>
                 @foreach($categories as $category)
                 <a class="link-dm" href="/danhmuc/{{$category->link}}">{{$category->title}}</a>

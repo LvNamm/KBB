@@ -49,6 +49,9 @@
         .newpaper-content{
             flex-wrap: nowrap;
         }
+        .container{
+            padding: 0;
+        }
     </style>
     <div class="container p-0">
         <div class=" ps-0 pe-0  mb-3 row w-100" style="justify-content:space-between">
@@ -100,16 +103,16 @@
 
     <div class="container">
         <div class="row"> 
-        <div class="col-md-6 ps-0" style="padding-left: 0.1rem !important;">
+        <div class="col-md-6 ps-0" style="padding-left: 0.7rem !important;">
             <img class="col-md-12 boder-green w-100 p-0 pt-2" src="/images/carosel/biangang2.png" alt="">
         </div>
-        <div class="col-md-6 pe-0" style="padding-right: 0.5rem !important;">
+        <div class="col-md-6 pe-0" style="padding-right: 1.5rem !important;">
             <img class="col-md-12 boder-green w-100 p-0 pt-2" src="/images/carosel/biangang1.jpg" alt="">
         </div>
     </div>
     </div>
 
-    <div class="newpaper container mt-4 pt-1" style="border: 1px solid rgb(35, 231, 61, 0.3); display:none">
+    <div class="newpaper container mt-4 pt-1" style="border: 1px solid rgb(35, 231, 61, 0.3); display: none">
         <div class="newpaper-content row">
             <div class="col-md-2">
                 <img  class="w-100" src="\images\newspaper\baibao1.jpg" alt="">
@@ -149,123 +152,22 @@
 
     </div>
 
+    <div class="main-img container mt-5 mb-5" style="padding-right: 0.7rem;">
 
-
-
-
-    <section class="section-products">
-        <!-- Trang trí nhà cửa -->
-        @foreach ($categories as $category)
-            <div class="container mb-5">
-                <div class="d-flex flex-row justify-content-between mb-3 category">
-                    <div>
-                        <div class="category-text center">
-                            <a href="/danhmuc/{{ $category->link }}">
-                                <h2 class="category-text">{{ $category->title }}</h2>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="d-flex align-self-end me-2">
-                        <div style="color: white">
-
-                            <a href="/danhmuc/{{ $category->link }}">Xem thêm &raquo</a>
-                        </div>
-                    </div>
-                </div>
-                <div style="position: relative">
-                    <div class="product-next product-icon-more mb-1"
-                        style="height: 99%;width:5%;position:absolute; right:-1%;">
-                        <i class="fa-solid fa-chevron-right product-action-icon product-action-icon-next"
-                            style="position:absolute; top:50%;left:50%;transform:translate(-50%,-50%);font-size:2rem"></i>
-                    </div>
-
-
-                    <div class="product-previous product-icon-more mb-1"
-                        style="height: 99%;width:5%;position:absolute; left:-1%;">
-                        <i class="fa-solid fa-chevron-left product-action-icon product-action-icon-previous"
-                            style="position:absolute; top:50%;left:50%;transform:translate(-50%,-50%);font-size:2rem"></i>
-                    </div>
-
-                    <div class="row div-show-product product-{{ $category->id }}">
-                        @php
-                            $i = 1;
-                        @endphp
-
-                        @foreach ($category->products as $product)
-                            <a href="/sanpham/{{ $product->link }}" class="product-item w-20">
-                                <div id="product-2" class="single-product ms-1 me-1 mb-1">
-                                    <div class="part">
-                                        <img class="test" style="width: 100%;" src="{{ $product->url_img }}"
-                                            alt="">
-                                    </div>
-                                    <div class="part-2 mt-2 ms-2">
-                                        <div style="min-height: 3rem">
-                                            <h3 style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"class="product-title">{{ $product->title }}</h3>
-                                        </div>
-                                        <h4 style="color: rgb(13, 196, 13)" class="product-price ms-1">
-                                            {{ $product->getMinPrice() }}&#8363;&nbsp;-&nbsp;{{ $product->getMaxPrice() }}&#8363;</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        @endforeach
-                        {{-- for($i=1;$i<=10;$i++){ if($i%2==1){ 
-                    if($i==1)
-                    echo'<a href="/sanpham/abc" class="product-item w-20">
-                    <div id="product-1" class="single-product me-1 mb-1">
-                        <div class="part">
-                            <img class="test" style="width: 100%;" src="/images/ex_product.jpg" alt="">
-                        </div>
-                        <div class="part-2">
-                            <h3 class="product-title">Here Product Title</h3>
-                            <h4 class="product-old-price">$79.99</h4>
-                            <h4 class="product-price">$49.99</h4>
-                        </div>
-                    </div>
-                    </a>' ;
-                    else{
-                        echo'<a href="/sanpham/abc" class="product-item w-20">
-                    <div id="product-1" class="single-product ms-1 me-1 mb-1">
-                        <div class="part">
-                            <img class="test" style="width: 100%;" src="/images/ex_product.jpg" alt="">
-                        </div>
-                        <div class="part-2">
-                            <h3 class="product-title">Here Product Title</h3>
-                            <h4 class="product-old-price">$79.99</h4>
-                            <h4 class="product-price">$49.99</h4>
-                        </div>
-                    </div>
-                    </a>' ;
-                    }
-                    }
-                    else{
-                    echo '<a href="/sanpham/abc" class="product-item w-20">
-                        <div id="product-2" class="single-product ms-1 me-1 mb-1">
-                            <div class="part">
-                                <img class="test" style="width: 100%;" src="/images/ex_product.jpg" alt="">
-                            </div>
-                            <div class="part-2">
-                                <h3 class="product-title">Here Product Title</h3>
-                                <h4 class="product-price">$49.99</h4>
-                            </div>
-                        </div>
-                    </a>';
-                    }
-                    } @endphp --}}
-                        <!-- Single Product -->
-                    </div>
-
-
+        <div class="d-flex flex-row justify-content-center mb-5 category" style="margin-right: 0rem;margin-left: 0rem;">
+            <div>
+                <div class="category-text center">
+                        <h2 class="category-text ms-1" style="margin: 0">Giới thiệu</h2>
                 </div>
             </div>
-        @endforeach
+        </div>
 
-
-
-    </section>
-
-
-
-    <br>
-    <br>
-    <br>
-@endsection
+        <img class="container" src="\images\home\Home.png" alt="">
+        <img class="container mt-3" src="\images\home\Gallery.png" alt="">
+        <img class="container mt-3" src="\images\home\3.png" alt="">
+        <img class="container mt-3" src="\images\home\4.png" alt="">
+        <img class="container mt-3" src="\images\home\6.png" alt="">
+        <img class="container mt-3" src="\images\home\Contact.png" alt="">
+        
+    </div>
+    @endsection
