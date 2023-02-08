@@ -174,10 +174,23 @@
     }
     .btn-search-product{
       height: 100%;
-      background-color: #888;
+      background-color: #dddddd;
+      position: relative;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
     .btn-search-product:hover{
       cursor: pointer;
+    }
+    .bx-search{
+      top: 50%!important;
+      left: 50%;
+      transform: translate(-70%,-50%);
+      font-size: 1.5rem;
     }
     .language{
       float: right;
@@ -267,9 +280,9 @@
 </a>
                         <div class="col-md-6">
                             <div class="d-flex form-inputs">
-                                <input class="form-control" type="text" style="height: 40px;"
-                                    placeholder="Search any product...">
-                                <div class="btn-search-product">
+                                <input class="form-control" id="input-search-product" type="text" style="height: 40px;"
+                                    placeholder="Tìm kiếm sản phẩm...">
+                                <div class="btn-search-product" onclick="searchProduct()">
                                   <i class="bx bx-search"></i>
                                 </div>
                             </div>
@@ -387,7 +400,12 @@
     src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <script src="/js/jsmain.js"></script>
-  
+  <script>
+    function searchProduct(){
+      let textSearch =document.getElementById("input-search-product").value;
+      window.location = "/search/"+textSearch;
+    }
+  </script>
   
 
 </body>

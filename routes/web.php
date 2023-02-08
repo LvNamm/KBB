@@ -34,6 +34,7 @@ Route::get("trogiup/{tg}",[PolicyCtrl::class,"index"]);
 Route::get("/catalogue",[Catalogue::class,'index']);
 Route::get("/catalogue/{link}",[Catalogue::class,'viewProductCatalogue']);
 Route::get("/",[HomeController::class,'index']);
+Route::get("/search/{keySearch}",[ProductCtrl::class,"search"]);
 
 //
 Route::get("/delete-types",[ProductCtrl::class,'deleteType']);

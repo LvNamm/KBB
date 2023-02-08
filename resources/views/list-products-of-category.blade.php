@@ -15,6 +15,10 @@
                 </div>
             </div>
         </div>
+        @if (@isset($count))
+            <p>Tìm thấy {{$count}} sản phẩm</p>
+            
+        @endif
         <div class="row row-cols-sm-2 row-cols-md-3 row-cols-xl-5">
 
 

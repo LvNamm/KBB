@@ -89,6 +89,15 @@ class ProductCtrl extends Controller
             }
         }
     }
+
+    public function search($keySearch){
+        $products = Product::query()->where('title', 'LIKE', "%{$keySearch}%")->get();
+        $title = 'Kết quả tìm kiếm cho từ khóa "'.$keySearch.'"';
+        $count = count($products);
+        $categories = Category::orderBy('priority')->get();
+        $interfaceColor = Interface_color::orderBy('id', 'DESC')->get()->first();
+        return view("list-products-of-category",["products"=>$products,'title'=>$title,"interfaceColor"=>$interfaceColor,"categories"=>$categories,"count"=>$count]);
+    }
     
     private function convert($str) {
 		$str = preg_replace("/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/", 'a', $str);
