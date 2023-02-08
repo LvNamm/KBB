@@ -26,10 +26,15 @@
                     </div>
                     <div class="part-2 mt-2 ms-2">
                         <div style="min-height: 3rem">
-                            <h3 style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"class="product-title">{{ $product->title }}</h3>
+                            <h3 style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;font-size:1rem"class="product-title">{{ $product->title }}</h3>
                         </div>
                         <h4 style="color: rgb(13, 196, 13)" class="product-price ms-1">
+                            @if ($product->getMinPrice() == $product->getMaxPrice())
+                                {{ $product->getMinPrice() }}&#8363;</h4>
+                                
+                            @else
                             {{ $product->getMinPrice() }}&#8363;&nbsp;-&nbsp;{{ $product->getMaxPrice() }}&#8363;</h4>
+                            @endif
                     </div>
                 </div>
                 </a>

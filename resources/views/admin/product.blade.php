@@ -12,16 +12,8 @@
         
         <th scope="col">id</th>
         <th scope="col">Tiêu đề</th>
-        <th scope="col">Giá</th>
-        <th scope="col">Số lượng</th>
         <th scope="col">Avata</th>
         <th scope="col">SKU</th>
-        <th scope="col">N.Liệu</th>
-        <th class="col">Xuất sứ</th>
-        <th class="col">Bao bì</th>
-        <th class="col">Công dụng</th>
-        <th class="col" style="width:100px">Mô tả</th>
-        <th class="col">Lưu ý</th>
         <th>L.Shopee</th>
         <th class="col">Action</th>
       </tr>
@@ -32,16 +24,8 @@
         <tr>
             <th scope="row">{{$product->id}}</th>
             <td>{{$product->title}}</td>
-            <td>{{$product->price}} </td>
-            <td>{{$product->amount}}</td>
             <td><img src="{{$product->url_img}}" style="height:70px" alt=""></td>
             <td>{{$product->sku}}</td>
-            <td>{{$product->fabrics}}</td>
-            <td>{{$product->export}}</td>
-            <td>{{$product->pack}}</td>
-            <td>{{$product->uses}}</td>
-            <td width="20%">{{$product->describe}}</td>
-            <td width="10%">{{$product->note}}</td>
             <td width="5%">
                 {!! !empty($product->link_shopee) ? '<a taget = "_black"href="'.$product->link_shopee.'">Link</a>' :''!!}
             </td>
